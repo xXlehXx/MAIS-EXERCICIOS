@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ex29 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite a ordem da matriz quadrada (ex: 3): ");
+        int n = sc.nextInt();
+        int[][] matriz = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.println("Digite o valor para [" + i + "][" + j + "]: ");
+                matriz[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Diagonal Principal:");
+        for (int i = 0; i < n; i++) {
+            System.out.println(matriz[i][i]);
+        }
+
+        sc.close();
+    }
+}
